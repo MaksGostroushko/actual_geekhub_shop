@@ -1,0 +1,14 @@
+<div class="col-4">
+  <div class="card">
+    <%= image_tag "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png" %>
+    <div class="card-body">
+      <h5 class="card-title d-flex justify-content-between">
+        <%= link_to category_product_path(product.category, product), class: "card-title text-truncate" do %>
+          <%= product.title %>
+        <% end %>
+        <p class="badge bg-light text-dark"><%= number_to_currency(product.price, unit: "UAH", separator: ",", delimiter: " ", format: "%n %u") %></p>
+      </h5>
+      <p class="card-text text-truncate"><%= product.description %></p>
+    </div>
+  </div>
+</div>
